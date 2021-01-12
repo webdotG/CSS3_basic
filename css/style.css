@@ -1,0 +1,247 @@
+                                                 /*селекторы*/
+body {
+    /*набор правил*/
+    margin: 0;
+    padding-left: 50px;
+    /*свойство:значение свойства*/
+}
+/* обьявление стилей для всех элементоа страницы*/
+*{
+    color: black;
+}
+/*селектор по тегу*/
+h3{
+    font-size: 25px;
+}
+/*вложенный селектор*/
+div p{
+    font-size: 30px;
+}
+/*состовной селектор*/
+p,
+span{
+    color: aqua;
+}
+/*селектор по классу*/
+.another_text{
+    font-size: 35px;
+}
+/*селектор по id*/
+#another_title{
+    font-size: 40px;
+}
+/*приоритетеность селеторов: 1-id(хер перекроешь), 2-по классу, 3-вложенный, 4-по тегу*/
+/*приоритетность свойств: то что написано ниже в коде, то и приоритетнее*//*каскадность - это ряд правил которые определяют какие именно свойства должны быть добавлены на элемент если у него определенно несколько конфликтующих свойств*/
+/*------------------------------------------------------------------------------------------*/
+
+                                       /*псевдоклассы и псевдоэлементы*/
+a{
+    text-decoration: none;
+    color: black;
+}
+/*:visited-псевдокласс работает если ссылку была уже посещена*/
+a:visited{
+    color: blue;
+}
+/*:hover-псевдокласс работает при наведении на обьект*/
+a:hover{
+    color: red;
+}
+/*:active-псевдокласс работает в короткий момент щелчка мыши/таба*/
+a:active{
+    color: green;
+}
+/*:focus-псевдокласс работает если мы перемещаемся по странице при помощи клавиши TAB*/
+a:focus{
+    font-weight: bold;
+}
+/*---------------------------------------------------------------------------------------------*/
+
+                                 /*псевдоклассы и псевдоэлементы*/
+.example1{
+    width: 50px;
+    color: black;
+}
+/*::first-letter-псевдоэлемент меняет свойства первой буквы*/
+.example1::first-letter{
+    font-size: 25px;
+}
+/*::first-line-псевдоэлемент меняет свойства первой строки*/
+.example1::first-line{
+    text-decoration: underline;
+}
+/*::selection-псевдоэлесент меняет свойства при выделении текста*/
+.example1::selection{
+    background-color: lightpink;
+    color: aquamarine;
+}
+/*::before-псевдоэлемент создает новый элементразметки*/
+/*content=""- обязательно надо прописывать даже если не будет контента, а нужно просто создать декоративную хуйню*/
+.example2::before{
+    content: "before";
+    font-size: 40px;
+    color: red;
+}
+/*::after-псевдоэлемент создает новый элементразметки*/
+/*content=""- обязательно надо прописывать даже если не будет контента, а нужно просто создать декоративную хуйню*/
+.example2::after{
+    content: "after";
+    font-size: 40px;
+    color: red;
+}
+/*:first-child-:псевдоселектор для работы с элементами списков*/
+.example3 li:first-child{
+    font-size: 50px;
+}
+/*:last-child-:псевдоселектор для работы с элементами списков*/
+.example3 li:last-child{
+    font-size: 10px;
+}
+/*:nth-child(even)-:псевдоселектор для работы с четными элементами списков*/
+.example3 li:nth-child(even){
+    font-size: 30px;
+}
+/*:nth-child(odd)-:псевдоселектор для работы с нечетными элементами списков*/
+.example3 li:nth-child(odd){
+    font-size: 40px;
+}
+/*:nth-child()-:псевдоселектор для работы с элементами списков*/
+.example3 li:nth-child(3),
+.example3 li:nth-child(4){
+    color: red;
+}
+/*:nth-child(3n)-:псевдоселектор для работы с каждым третим элементом списка или с любым смотря какую цифру укажешь*/
+.example3 li:nth-child(3n){
+    color: aqua;
+}
+/*:not(.item)-псевдоселектор говорит- присвоить свойства все Кроме тех у кого есть класс item*/
+.example3 li:not(.item){
+    border: 2px solid black;
+}
+/*---------------------------------------------------------------------------------------------------------------*/
+                                     /*block,inline,inline-block*/
+.example4 div{
+    border: 2px red solid;
+}
+.test41{
+    display: block; /*занимает всю шиоину экрана*/
+}
+.test42{
+    display: inline; /*занимает ширину контента и остается в строке*/
+}                    /*НЕ работает- margin-top/margin-bottom/width/height*/
+.test43{
+    display: inline-block; /*занимает ширину контента и остается в строке*/
+}
+/*---------------------------------------------------------------------------------------------------------------*/
+                                                 /*margin,padding*/
+.example5{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.example5 li{
+    display: inline-block;
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    border: 2px black solid;
+}
+.example5 li{
+    margin-bottom: 40px;       /*конечный размер обьекта равен=*/
+    margin-right: 25px;        /*width/height+padding+border+margin=*/
+    padding: 10px;
+}
+.example6{
+    width: 150px;
+    height: 50px;
+    border: 2px red solid;
+    margin-bottom: 50px;
+}                              /*пример схлопывания вертикальных margin*/
+.example7{                     /*горизонтальные маргины не схлопываются*/
+    width: 250px;
+    height: 50px;
+    border: 2px black solid;
+    margin-top: 25px;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+                                                 /*box-sizing*/
+.example8 div,
+.example9 div{
+    display: inline-block;
+}
+.example8 h5,
+.example9 h5{
+    margin: 0;
+    display: inline;
+    color: black;
+    font-size: 25px;
+}
+.example8 div{
+    box-sizing: content-box;
+    padding: 25px;
+    margin: 25px;
+    width: 100px;
+    height: 100px;
+}
+.example9 div{
+    box-sizing: border-box;
+    padding: 25px;
+    margin: 25px;
+    width: 100px;
+    height: 100px;
+}
+/*--------------------------------------------------------------------------------------------------------------*/
+                                                 /*position*/
+.example10{
+    width: 400px;
+    height: 700px;
+    display: inline-block;
+    border: 1px black solid;
+}
+.example101{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 5px red solid;
+
+}
+.example11{
+    width: 400px;
+    height: 700px;
+    display: inline-block;
+    border: 1px black solid;
+    position: relative;
+}
+.example111{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 5px red solid;
+}
+.example12{
+    width: 400px;
+    height: 700px;
+    display: inline-block;
+    border: 1px black solid;
+}
+.example121{
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    border: 5px red solid;
+}
+.example101{
+    position: relative;
+    top: 500px;
+    left: 50px;
+}
+.example111{
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+}
+.example121{
+    position: sticky;
+    top: 700px;
+    right: 250px;
+}
