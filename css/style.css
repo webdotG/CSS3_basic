@@ -194,7 +194,7 @@ a:focus{
                                                  /*position*/
 .example10{
     width: 400px;
-    height: 700px;
+    height: 300px;
     display: inline-block;
     border: 1px black solid;
 }
@@ -207,7 +207,7 @@ a:focus{
 }
 .example11{
     width: 400px;
-    height: 700px;
+    height: 300px;
     display: inline-block;
     border: 1px black solid;
     position: relative;
@@ -220,7 +220,7 @@ a:focus{
 }
 .example12{
     width: 400px;
-    height: 700px;
+    height: 300px;
     display: inline-block;
     border: 1px black solid;
 }
@@ -232,7 +232,7 @@ a:focus{
 }
 .example101{
     position: relative;
-    top: 500px;
+    top: 100px;
     left: 50px;
 }
 .example111{
@@ -242,6 +242,102 @@ a:focus{
 }
 .example121{
     position: sticky;
-    top: 700px;
+    top: 50px;
     right: 250px;
+}
+.example13{
+    margin: 50px;
+}
+
+.example13 input:focus,
+.example13 input:hover{
+    outline: red 5px solid;
+}
+.example14 p{
+    color: black;
+    text-shadow: 2px 10px 5px blue;
+}
+.example14 h3{
+    text-shadow: 2px 10px 5px blue, 5px -10px 10px red, 1px 1px 2px green;
+}
+.example15{
+    display: flex;
+    width: 75px;
+    min-height: 75px;
+    margin: 100px;
+    background-color: red;
+    box-shadow: 2px 10px 5px blue, -5px -5px 1px green;
+}
+.example16{
+    list-style-type: lower-roman;
+}
+.example171{
+    visibility: hidden;
+}
+.example18{
+    display: inline-block;
+    width: 500px;
+    height: 900px;
+    border: 3px black solid;
+    background: url("../img/pin.png") 50% 0% no-repeat ,url("../img/Watercolor.jpg") repeat;
+    background-attachment: scroll, fixed;
+}
+.example19 {
+    display: inline-block;
+    margin-left: 200px;
+    width: 500px;
+    height: 900px;
+    background-image: url("../img/pin.png");
+    background-position-x: 70%;
+    background-position-y: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    border: 3px black solid;
+}
+.example20{
+    display: flex;
+    flex-wrap: wrap;
+    width: 700px;
+    margin-left: 300px;
+    list-style-type: none;
+    padding: 0;
+}
+.example20 li{
+    display: flex;
+    width: 200px;
+    height: 200px;
+    margin-top: 10px;
+    margin-right: 10px;
+    border: 2px black solid;
+    font-size: 50px;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+}
+.example201{
+    background-image: linear-gradient(0deg, black, white);
+}
+.example202{
+    background-image: linear-gradient(45deg,black,white);
+}
+.example203{
+    background-image: linear-gradient(to left bottom,black,red,white);
+}
+.example204{
+    background: linear-gradient(0deg,black 2% ,red 85%,white);
+}
+.example205{
+    background: repeating-linear-gradient(0deg, black 25px, red 25px, red 50px, white 50px, white 75px, black 75px, black 100px  );
+}
+.example206{
+    background: radial-gradient(red,black);
+}
+.example207{
+    background: radial-gradient(circle farthest-side, red, black);
+}
+.example208{
+    background: radial-gradient(circle closest-corner, red, black);
+}
+.example209{
+    background: repeating-radial-gradient(circle,red 15px, black 30px,white 45px);
 }
